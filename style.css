@@ -6,6 +6,7 @@
 
 #logo{
     margin-left: 30px;
+    font-size: 1.75em;
 }
 
 
@@ -34,11 +35,50 @@ li{
 li a{
     text-decoration: none;
     color: white;
+    font-size: 1.5em;
+}
+
+.shop{
+    font-weight: bold;
 }
 
 
-#cart{
-    width: 7%;
-    margin-right: 30px;
+h2{
+    margin-top: 30px;
+    margin-left: 30px;
 }
 
+.food-container{
+    margin: 50px 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.toy-container{
+    margin: 50px 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card-img{
+    width: 200px;
+    height: 300px;
+}
+
+#balls{
+    width: 200px;
+    height: 300px;
+    padding: 90px 30px;
+}
+
+#stick{
+    width: 200px;
+    height: 300px;
+    padding: 90px 30px;
+}
+
+.card{
+    text-align: center;
+}
