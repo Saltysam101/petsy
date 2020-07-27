@@ -39,20 +39,28 @@ let addToCart = (e) => {
 let addItemToCart = (name, price, imgSrc) => {
     let cartRow = document.createElement('div')
     let cartItems = document.getElementsByClassName('cart')[0]
+    let cartItemNames = cartItems.getElementsByClassName('name')
+    for(let i = 0; i < cartItemNames.length; i++){
+        if (cartItemNames[i].innerText == name){
+            alert('Item has already been added to the cart!')
+            return
+        }
+    }
+
     let cartRowContent = 
     `<div class="item">
             <img class="cart-img" src="${imgSrc}" alt="">
             <h3>${name}</h3>
             <p class="item-price">${price}</p>
-            <p class="cart-quantity">1</p>
+            <p class="item-quantity">1</p>
             <button class="remove-item">Remove</button>
         </div>`
         cartRow.innerHTML = cartRowContent
-    console.log(cartRow)
     cartItems.append(cartRow);
+    cartRow.getElementsByClassName('remove-item')[0].addEventListener('click',
+    removeItem)
+    updateCartTotal()
 }
-
-
 
 let updateCartTotal = () => {
     let cartContainer = document.getElementsByClassName('cart')[0]
