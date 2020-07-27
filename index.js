@@ -28,11 +28,28 @@ let removeItem = (e) => {
 
 
 let addToCart = (e) => {
-    console.log('hello')
     let button = e.target
     let shopItem = button.parentElement
-    let name = shopItem.getElementById('name')[0].innerText
-    console.log(name)
+    let name = shopItem.getElementsByClassName('name')[0].innerText
+    let price = shopItem.getElementsByClassName('price')[0].innerText
+    let imgSrc = shopItem.getElementsByClassName('card-img')[0].src
+    addItemToCart(name,price,imgSrc)
+}
+
+let addItemToCart = (name, price, imgSrc) => {
+    let cartRow = document.createElement('div')
+    let cartItems = document.getElementsByClassName('cart')[0]
+    let cartRowContent = 
+    `<div class="item">
+            <img class="cart-img" src="${imgSrc}" alt="">
+            <h3>${name}</h3>
+            <p class="item-price">${price}</p>
+            <p class="cart-quantity">1</p>
+            <button class="remove-item">Remove</button>
+        </div>`
+        cartRow.innerHTML = cartRowContent
+    console.log(cartRow)
+    cartItems.append(cartRow);
 }
 
 
