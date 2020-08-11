@@ -1,1 +1,2 @@
 # petsy
+This is a desktop only site for now. It is NOT a real shop but acts like one on the front-end. You can select any item once. If you want more than one of any particular item, you can adjust the quantity in the cart at the bottom of the page. After you are done selecting your items, you can click on the checkout button and it will clear your cart and a popup will thank you for your purchase.
